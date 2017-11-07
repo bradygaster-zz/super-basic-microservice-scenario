@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "bradygaster",
+      "authorEmail": "bradyg@microsoft.com",
+      "authorUrl": ""
+    }
+  }
+}

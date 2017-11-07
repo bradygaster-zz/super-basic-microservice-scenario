@@ -1,0 +1,21 @@
+version: "3"
+services:
+  
+  webapp:
+    build: ./koa-app
+    image: koa-app:latest
+    networks: 
+      default:
+        aliases:
+          - webapp
+
+  microservice:
+    build: ./koa-client
+    image: koa-client:latest
+    networks: 
+      default:
+        aliases:
+          - microservice
+
+networks:
+  default:

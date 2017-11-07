@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  koa-client:
+    image: koa-client
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 4000:4000
+      - 9229:9229
+    command: node --inspect app.js

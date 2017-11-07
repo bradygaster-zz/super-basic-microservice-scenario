@@ -1,0 +1,75 @@
+{
+  "name": "koa-client",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "bradygaster",
+    "email": "bradyg@microsoft.com",
+    "url": ""
+  },
+  "files": [
+  ],
+  "main": "app",
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "nsp": "^2.6.3",
+    "eslint": "^4.1.0",
+    "prettier": "^1.7.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.1",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-config-xo": "^0.18.2",
+    "jest": "^21.0.0",
+    "jest-cli": "^21.0.0"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint .",
+    "precommit": "lint-staged",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "printWidth": 90
+        }
+      ]
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "repository": "bradygaster/koa-client",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}

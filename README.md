@@ -11,6 +11,7 @@ To get this working, you'll need to install [Docker](http://www.docker.com). The
 
 ```
 git clone https://github.com/bradygaster/super-basic-microservice-scenario.git
+cd super-basic-microservice-scenario
 docker-compose up
 ```
 
